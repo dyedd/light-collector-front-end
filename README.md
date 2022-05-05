@@ -119,3 +119,4 @@
 ![image-20220505210646823](https://gitee.com/Dye/statics/raw/master/img/202205052106881.png)
 
 - 后端地址：https://github.com/dyedd/light-collector-front-back
+- 介绍视频： https://www.bilibili.com/video/BV1cT4y167vZ/
