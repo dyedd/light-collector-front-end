@@ -1,0 +1,34 @@
+html {
+    --theme: #409eff;
+    --background: #fff;
+    --main: #303133;
+    --routine: #606266;
+    --minor: #909399;
+    --seat: #c0c4cc;
+    --classA: #dcdfe6;
+    --classB: #e4e7ed;
+    --classC: #ebeef5;
+    --classD: #f2f6fc;
+    --radiusA: 1rem;
+    --radiusB: .8rem;
+    --text-shadow: 0 .1rem .2rem rgba(0, 0, 0, 0.25);
+    --box-shadowA: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    --box-shadowB: 0 2px 9px rgba(0,0,0,0.1);
+}
+
+/* 黑夜模式的配色方案 */
+html[data-night='night'] body {
+    --theme: #54b5db;
+    --background: #232323;
+    --main: #999;
+    --routine: #888;
+    --minor: #777;
+    --seat: #666;
+    --classA: #515253;
+    --classB: #454545;
+    --classC: #414243;
+    --classD: #303030;
+    --text-shadow: none;
+    --box-shadowA: none;
+    --box-shadowB: none;
+}
