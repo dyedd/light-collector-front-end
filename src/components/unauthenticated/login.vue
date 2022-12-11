@@ -7,7 +7,6 @@ import {
 import { message } from "ant-design-vue";
 import { useUserStore } from '@/store/user'
 import axios from '@/utils/request';
-import { setStorage } from '@/utils/storage';
 import mybus from "@/utils/myBus";
 import {
     getStorage,
@@ -38,20 +37,20 @@ const onSubmit = () => {
         .validate()
         .then(() => {
             axios.post("http/api/login", formState).then((res) => {
+                console.log(res)
                 if (res.data.code == 500) {
                     message.error(res.data.msg)
                 } else {
-                    setStorage({
-                        key: "token",
-                        data: res.data.token,
-                    });
-                    message.success(res.data.msg)
+                    store.setLocalStage(res.data.token)
+                    message.success(`${res.data.msg},等待跳转...`)
+                    setTimeout(()=>{
+                        window.location.reload()
+                    },1000)
                 }
             });
             // formRef.value.resetFields();
             mybus.emit("open", false);
 
-            window.location.reload()
         })
         .catch((error) => {
             message.error(error)

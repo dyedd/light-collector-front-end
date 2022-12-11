@@ -1,6 +1,7 @@
 import {
   defineStore
 } from 'pinia'
+import { setStorage } from '@/utils/storage';
 export const useUserStore = defineStore('user', {
   // a function that returns a fresh state
   state: () => {
@@ -33,6 +34,12 @@ export const useUserStore = defineStore('user', {
   // persist: true,
   getters: {},
   actions: {
+    setLocalStage(token){
+      setStorage({
+        key: "token",
+        data: token,
+    });
+    },
     setUser(data) {
       this.user = {
         ...this.user,
