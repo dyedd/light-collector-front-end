@@ -53,14 +53,16 @@ const modopen = ref(false)
 const modcate = reactive({
   title: ''
 })
-const modCategory = () => {
+const mod_id = ref(0)
+const modCategory = (id) => {
+  mod_id.value = id;
+  console.log(id)
   modopen.value = true;
 }
-const confirmmod = (e) => {
-  console.log(e);
+const confirmmod = () => {
   console.log(modcate.title);
   const data = {
-    id: e['_id'],
+    id: mod_id.value,
     catename: modcate.title
   }
   axios.patch('http/api/category?update=card', data).then((res) => {
@@ -178,7 +180,7 @@ const deleteCategory = (id) => {
             </draggable>
             <Teleport to="body">
               <a-modal v-model:visible="modopen" title="修改新的分类" ok-text="确定" cancel-text="取消" @cancel="cancelmod"
-                @ok="confirmmod(card)" class="my-modal">
+                @ok="confirmmod()" class="my-modal">
                 <a-form ref="modCategory" :model="modcate" layout="vertical" name="form_in_mod">
                   <a-form-item :rules="[{ required: true, message: '分类名称不能为空' }]">
                     <a-input v-model:value="modcate.title" placeholder="请输入分类名称" />
