@@ -65,7 +65,8 @@ const confirmmod = () => {
     id: mod_id.value,
     catename: modcate.title
   }
-  axios.patch('http/api/category?update=card', data).then((res) => {
+  if (userStore.user.categories > 0) {
+    axios.patch('http/api/category?update=card', data).then((res) => {
     if (res.status == 200) {
       message.success(res.data.msg)
       axios.get('http/api/category').then((res) => {
@@ -75,6 +76,7 @@ const confirmmod = () => {
       })
     }
   })
+  }
   modopen.value = false;
 }
 const cancelmod = () => {
@@ -91,11 +93,14 @@ const onListDragEnd = (e, l, card) => {
     moveToIndex: newIndex
   }
   // console.log(moveData);
-  axios.patch('http/api/category?move=card', moveData).then((res) => {
+  if (userStore.user.categories > 0) {
+    axios.patch('http/api/category?move=card', moveData).then((res) => {
     if (res.status == 200) {
       message.success(res.data.msg)
     }
   })
+  }
+
 
 }
 const onpanelDragEnd = (e) => {
