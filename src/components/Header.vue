@@ -66,7 +66,6 @@ const quit = () => {
     for (let i = keys.length; i--;) {
       document.cookie = keys[i] + '=0;path=/;expires=' + new Date(0).toUTCString();
       document.cookie = keys[i] + '=0;path=/;domain=' + document.domain + ';expires=' + new Date(0).toUTCString();
-      document.cookie = keys[i] + '=0;path=/;domain=kevis.com;expires=' + new Date(0).toUTCString();
     }
   }
   location.reload()
