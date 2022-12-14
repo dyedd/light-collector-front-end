@@ -42,47 +42,47 @@
 
 当用户未进行登录时，无法查看自己当前收藏的gitee仓库。此时只能进行搜索以及查看收藏列表，搜索的网站分别有百度，必应，360等可以自由切换。
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106386.jpg)
+![img](./introduction/202205052106386.jpg)
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106048.jpg)
+![img](./introduction/202205052106048.jpg)
 
 登陆用户可以进入个人中心对搜索引擎进行增删改查
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106387.jpg)用户还可以在控制台选择是否开启历史记录
+![img](./introduction/202205052106387.jpg)用户还可以在控制台选择是否开启历史记录
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106388.jpg)
+![img](./introduction/202205052106388.jpg)
 
 当开启历史记录后，在搜索框进行搜索能够显示近期记录
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106389.jpg)
+![img](./introduction/202205052106389.jpg)
 
 ### 2.站点收藏
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106390.jpg)未登陆用户只能使用预设站点，可以体验点击排队的功能
+![img](./introduction/202205052106390.jpg)未登陆用户只能使用预设站点，可以体验点击排队的功能
 
 登陆用户可以对站点进行增删改查
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106392.jpg)
+![img](./introduction/202205052106392.jpg)
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106393.jpg)
+![img](./introduction/202205052106393.jpg)
 
  
 
 ### 3.打卡签到功能
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106394.jpg)
+![img](./introduction/202205052106394.jpg)
 
 登陆用户可以进行日常打卡，打卡记录在控制台我的账号，查看日历图
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106395.jpg)
+![img](./introduction/202205052106395.jpg)
 
 并且会根据打卡时间，生成近一星期时间折线图
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106803.jpg)4.站点壁纸功能
+![img](./introduction/202205052106803.jpg)4.站点壁纸功能
 
 登陆用户可以对导航页面头部壁纸进行更换，更换方式在控制台，个性设置
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106396.jpg)
+![img](./introduction/202205052106396.jpg)
 
 ## 分类模块
 
@@ -90,33 +90,36 @@
 
 在控制台，我的账号，可以进行gitee账号绑定，绑定成功后，自动将gitee star的优秀项目导入数据库
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106397.jpg)
+![img](./introduction/202205052106397.jpg)
 
 ### 2.收藏列表
 
 未登陆用户，只能体验预设仓库收藏列表
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106398.jpg)登陆用户在导入仓库后，来到该页面，可以创建分类，移动分类，甚至移动分类，可以自由拖拽。
+![img](./introduction/202205052106398.jpg)登陆用户在导入仓库后，来到该页面，可以创建分类，移动分类，甚至移动分类，可以自由拖拽。
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106399.jpg)
+![img](./introduction/202205052106399.jpg)
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106614.jpg)
+![img](./introduction/202205052106614.jpg)
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106400.jpg)
+![img](./introduction/202205052106400.jpg)
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106401.jpg)
+![img](./introduction/202205052106401.jpg)
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106402.jpg)
+![img](./introduction/202205052106402.jpg)
 
 ## 便签模块
 
 登陆用户可以新建便签，系统将生成的便签数据可视化，不再以列表形式，用户也可以随意拖动，实现“纸质便签般”的粘贴。双击两下即可删除，十分便捷。
 
-![img](https://gitee.com/Dye/statics/raw/master/img/202205052106179.jpg)
+![img](./introduction/202205052106179.jpg)
 
  
 
-![image-20220505210646823](https://gitee.com/Dye/statics/raw/master/img/202205052106881.png)
+![image-20220505210646823](./introduction/202205052106881.png)
+
+## 前后端不同前缀同根域名配置
+将`src\components\Header.vue`的` document.domain`改成后端设置的域名
 
 - 后端地址：https://github.com/dyedd/light-collector-front-back
 - 介绍视频： https://www.bilibili.com/video/BV1cT4y167vZ/
