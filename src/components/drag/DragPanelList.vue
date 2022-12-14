@@ -104,20 +104,22 @@ const onListDragEnd = (e, l, card) => {
 
 }
 const onpanelDragEnd = (e) => {
-
+  console.log(e)
   const { oldIndex, newIndex } = e
   const moveData = {
     moveFromIndex: oldIndex,
     moveToIndex: newIndex
   }
   console.log(moveData);
-  axios.patch('http/api/category?move=list', moveData).then((res) => {
+  if (userStore.user.categories > 0) {
+    axios.patch('http/api/category?move=list', moveData).then((res) => {
     if (res.status == 200) {
       message.success(res.data.msg)
       // console.log(res.data);
       // categoryStore.setInfo(res.data)
     }
   })
+  }
 
 }
 const deleteCategory = (id) => {
